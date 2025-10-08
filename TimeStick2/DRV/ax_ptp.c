@@ -805,7 +805,7 @@ static int ax88279_ptp_settime64(struct ptp_clock_info *ptp,
 	struct ax_device *axdev = (struct ax_device *)ptp_cfg->axdev;
 	u64 sec;
 	u32 nsec;
-	u8 timestamp[10] = {0};
+	u8 timestamp[12] = {0};
 	int ret;
 
 	nsec = (u32)ts->tv_nsec;
@@ -813,7 +813,7 @@ static int ax88279_ptp_settime64(struct ptp_clock_info *ptp,
 	sec = (u64)ts->tv_sec;
 	memcpy(&timestamp[4], &sec, 6);
 
-	ret = ax_ptp_clk_write(axdev, AX_PTP_SET_80B_LCK_VAL0, 10, timestamp);
+	ret = ax_ptp_clk_write(axdev, AX_PTP_SET_80B_LCK_VAL0, 12, timestamp);
 	if (ret < 0)
 		return ret;
 
