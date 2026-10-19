@@ -1,6 +1,9 @@
 # USB to Ethernet with Hardware Timestamping and PPS output
 # TimeStick
 
+<img width="1736" height="906" alt="04523951-b32e-4a5b-9707-25d7473da64c" src="https://github.com/user-attachments/assets/e7f03a06-8b91-4b4c-ab9f-0786ab958451" />
+
+
 ## USB to Ethernet with Hardware Timestamping and PPS outoput
 A USB 3.2 Gen1 to Gigabit Ethernet dongle based on the AX88179B. 
 - The AX88179B supports Precision Time Protocol (PTP) (IEEE 1588v2 and 802.1AS)
