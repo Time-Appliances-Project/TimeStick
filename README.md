@@ -1,58 +1,22 @@
-# USB to Ethernet with Hardware Timestamping and PPS output
-# TimeStick
+# Time Stick
 
-<img width="1736" height="906" alt="04523951-b32e-4a5b-9707-25d7473da64c" src="https://github.com/user-attachments/assets/e7f03a06-8b91-4b4c-ab9f-0786ab958451" />
+Time Stick is a family of USB Ethernet adapters for precision timing. The hardware timestamps Precision Time Protocol (PTP) packets as they enter and leave the Ethernet port. With Time Stick V3 and the ISPCS app, you can run a PTP exchange and see the measured clock offset and network path delay.
 
+[Time Stick V3 getting started guide](TimeStick3/README.md)
 
-## USB to Ethernet with Hardware Timestamping and PPS outoput
-A USB 3.2 Gen1 to Gigabit Ethernet dongle based on the AX88179B. 
-- The AX88179B supports Precision Time Protocol (PTP) (IEEE 1588v2 and 802.1AS)
-- This hardware implementation features a female SMA to break out the 1PPS signal from the AX88179B.
+<a href="TimeStick3/images/time-stick-v3.jpg"><img src="TimeStick3/images/time-stick-v3.jpg" alt="Time Stick V3 held between two fingers, with its USB-C plug on the left and Ethernet jack on the right" width="420"></a>
 
-![PHOTO-2024-03-19-19-13-36](https://github.com/opencomputeproject/Time-Appliance-Project/assets/1751211/bad0fec2-05ab-4fcc-91c1-67a0ec44fbe9)
+<a href="https://apps.apple.com/app/ispcs/id6803257596"><img src="assets/app-store-badge.svg" alt="Download ISPCS on the App Store" height="40" align="middle"></a>
+<a href="https://play.google.com/store/apps/details?id=org.ispcs.conference"><img src="assets/google-play-badge.png" alt="Get ISPCS on Google Play" height="60" align="middle"></a>
 
-## Order
+## Hardware generations
 
-Order your TimeStick from this link: https://www.tindie.com/products/timeappliances/time-stick-v2/
-
-# Installation
-
-Step 1: First you need to compile the Time Stick module (driver). Either clone the entire repo and take it from there (skip to step 2) so use the following commands:
-```bash
-cd
-git clone https://github.com/Time-Appliances-Project/TimeStick.git
-cd TimeStick/DRV
-make
-sudo make install
-```
-Step 2: You need to remove cdc_ncm before installing the AX88179A module.
-Please follow the steps below to remove cdc_ncm and install the AX88179A module.
-
-```bash
-sudo rmmod cdc_mbim
-sudo rmmod cdc_ncm
-sudo rmmod ax88179_178a
-```
-
-Step 3: Insert the new module
-```bash
-sudo modprobe ax_usb_nic
-```
-
----
+| Generation | Timing features | Resources |
+| --- | --- | --- |
+| **Time Stick V3** | USB-C timing adapter. Use ISPCS to operate a grandmaster or follower and inspect PTP measurements. | [V3 setup and first measurement](TimeStick3/README.md) |
+| **Time Stick V2** | Adds a pulse-per-second (PPS) input and support for a GNSS receiver. | [V2 overview and hardware files](TimeStick2/) · [Linux driver instructions](TimeStick2/DRV/Readme.txt) · [Order V2](https://www.tindie.com/products/timeappliances/time-stick-v2/) |
+| **Time Stick V1** | Gigabit Ethernet with hardware timestamps and a PPS output on an SMA connector. | [V1 overview and schematic](TimeStick1/) · [Linux driver instructions](TimeStick1/DRV/Readme.txt) |
 
 ## License
 
-This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
-
-You are free to:
-
-Share — copy and redistribute the material in any medium or format
-Adapt — remix, transform, and build upon the material
-Under the following terms:
-
-Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
-NonCommercial — You may not use the material for commercial purposes.
-For full details, see: https://creativecommons.org/licenses/by-nc/4.0/
-
-As the project creator, I reserve the right to use this material commercially or under any other terms.
+See [LICENSE.txt](LICENSE.txt) for the project's Creative Commons Attribution-NonCommercial 4.0 International license. App Store and Google Play badges are trademarks of their respective owners.
