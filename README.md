@@ -4,7 +4,9 @@ Time Stick is a family of USB Ethernet adapters for precision timing. The hardwa
 
 [Time Stick V3 getting started guide](TimeStick3/README.md)
 
-<a href="TimeStick3/images/time-stick-v3.jpg"><img src="TimeStick3/images/time-stick-v3.jpg" alt="Time Stick V3 held between two fingers, with its USB-C plug on the left and Ethernet jack on the right" width="420"></a>
+| [Time Stick V1](TimeStick1/) | [Time Stick V2](TimeStick2/) | [Time Stick V3](TimeStick3/) |
+| :---: | :---: | :---: |
+| [![V1 board with a USB-A plug and gold SMA connector](TimeStick1/images/time-stick-v1-close-up.jpg)](TimeStick1/images/time-stick-v1-close-up.jpg) | [![V2 board marked TIME STICK 2 with a USB-A plug](TimeStick2/images/time-stick-v2-close-up.jpg)](TimeStick2/images/time-stick-v2-close-up.jpg) | [![V3 board with a USB-C plug on the left and Ethernet jack on the right](TimeStick3/images/time-stick-v3-close-up.jpg)](TimeStick3/images/time-stick-v3-close-up.jpg) |
 
 <a href="https://apps.apple.com/app/ispcs/id6803257596"><img src="assets/app-store-badge.svg" alt="Download ISPCS on the App Store" height="40" align="middle"></a>
 <a href="https://play.google.com/store/apps/details?id=org.ispcs.conference"><img src="assets/google-play-badge.png" alt="Get ISPCS on Google Play" height="60" align="middle"></a>

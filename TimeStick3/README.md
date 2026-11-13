@@ -2,6 +2,8 @@
 
 Time Stick V3 connects a USB-C host to an Ethernet timing peer. The stick records hardware timestamps for PTP packets. The ISPCS app uses those timestamps to display the offset between the clocks and the mean path delay.
 
+<a href="images/time-stick-v3.jpg"><img src="images/time-stick-v3-close-up.jpg" alt="Time Stick V3 board showing its USB-C plug and Ethernet jack" width="560"></a>
+
 ## Try a two-stick measurement
 
 You will need two V3 sticks with timing firmware, two compatible USB-C hosts running ISPCS, and one Ethernet cable. The following setup uses an iPhone for the follower.
